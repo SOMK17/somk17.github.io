@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Curtain Effect -->
+    <div id="curtain-left" class="curtain"></div>
+    <div id="curtain-right" class="curtain"></div>
+
+    <!-- Password Protection Modal -->
+    <div id="password-modal">
+        <div class="modal-content">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="checkPassword()">Enter</button>
+        </div>
+    </div>
+
+    <!-- Portfolio Content -->
+    <div id="portfolio-content" style="display:none;">
+        <h1>Welcome to My Portfolio</h1>
+        <div class="gallery">
+            <!-- Replace with your images -->
+            <img src="images/image1.jpg" alt="Image 1">
+            <img src="images/image2.jpg" alt="Image 2">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
