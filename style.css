@@ -61,7 +61,7 @@ body {
 .portfolio-img {
     width: auto; /* Allow width to be automatic */
     max-width: 80%; /* Limit width to 80% of the container */
-    max-height: 400px; /* Set a maximum height for the images */
+    max-height: 600px; /* Set a maximum height for the images */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure the image is treated as a block element */
     margin: 0 auto; /* Center the image horizontally */
