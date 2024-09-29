@@ -1,7 +1,7 @@
 // Check Password Function
 function checkPassword() {
     const password = document.getElementById('password').value;
-    const correctPassword = 'NachBhfuilSeanánGoHíontachtArFad'; // Replace with your password
+    const correctPassword = 'TáSeanánGoHíontacht'; // Replace with your password
 
     if (password === correctPassword) {
         document.getElementById('password-modal').style.display = 'none';
