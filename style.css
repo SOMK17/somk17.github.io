@@ -203,14 +203,6 @@ body {
 }
 
 
-.slideshow-container {
-    display: flex;
-    justify-content: center; /* Center the slides */
-    align-items: center; /* Center vertically */
-    height: 100%; /* Use full height of the container */
-}
-
-
 /* Main Slides */
 .mySlides {
     display: none; /* Hide all slides by default */
