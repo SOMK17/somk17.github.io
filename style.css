@@ -191,3 +191,22 @@ body {
 .prev:hover, .next:hover {
     background-color: #444; /* Darken background on hover */
 }
+
+/* Slideshow Container */
+.slideshow-container {
+    width: 100%; /* Allow full width for the slideshow */
+    max-width: 800px; /* Set a max width for larger displays */
+    position: relative; /* For positioning slides */
+}
+
+/* Main Slides */
+.mySlides {
+    display: none; /* Hide all slides by default */
+    text-align: center; /* Center content */
+}
+
+/* Ensure titles are styled appropriately */
+.portfolio-img-container p {
+    color: #f0f0f0; /* Off-white text color */
+    text-align: center; /* Center titles */
+}
