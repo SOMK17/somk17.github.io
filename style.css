@@ -200,7 +200,9 @@ body {
     margin: 0 auto; /* Center the container horizontally */
     display: flex; /* Add flexbox to center the image */
     justify-content: center; /* Center the content inside */
+    height: 100%; /* Optional, ensures full height if necessary */
 }
+
 
 
 /* Main Slides */
