@@ -49,14 +49,27 @@ function showSlides(n) {
         slides[i].style.display = "none";  
     }
 
+    // Show the current slide
     slides[slideIndex - 1].style.display = "block";  
+
+    // Update the title below the image
+    const title = document.querySelector('.portfolio-img-container p');
+    title.textContent = slides[slideIndex - 1].querySelector('img').alt; // Use alt attribute for the title
 }
+
 
 let currentImageIndex = 0;
 const images = [
-    { src: 'images/image1.jpg', title: 'Image 1' },
-    { src: 'images/image2.jpg', title: 'Image 2' },
-    { src: 'images/image3.jpg', title: 'Image 3' },
+    { src: 'images/image1.jpg', title: 'Healer' },
+    { src: 'images/image2.jpg', title: 'Market River' },
+    { src: 'images/image3.jpg', title: 'Street Traffic' },
+    { src: 'images/image4.jpg', title: 'Deer at Night' },
+    { src: 'images/image5.jpg', title: 'Clan Galloping' },
+    { src: 'images/image6.jpg', title: 'Selling Fish' },
+    { src: 'images/image7.jpg', title: 'Swan Chasing Bull' },
+    { src: 'images/image8.jpg', title: 'Burnings of Clonmacnoise' },
+    { src: 'images/image9.jpg', title: 'Fisherman' },
+    { src: 'images/image10.jpg', title: 'Tobacco Farmers' },
     // Add more images as needed
 ];
 
