@@ -70,6 +70,11 @@ body {
     margin: 0 auto; /* Center the image horizontally */
 }
 
+.mySlides {
+    display: none; /* Hide all slides by default */
+    position: relative; /* Ensure positioning relative to the container */
+    margin: 0 auto; /* Center the slide */
+}
 
 #portfolio-content {
     background-color: #000000; /* Black background */
@@ -89,7 +94,6 @@ body {
     font-size: 18px;
     margin-top: 10px;
 }
-
 
 .portfolio-img {
     display: block;
@@ -166,7 +170,6 @@ body {
     color: #ffffff; /* White text on hover */
 }
 
-
 .button-container {
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center the buttons */
@@ -188,4 +191,3 @@ body {
 .prev:hover, .next:hover {
     background-color: #444; /* Darken background on hover */
 }
-
