@@ -195,15 +195,35 @@ body {
 /* Slideshow Container */
 .slideshow-container {
     width: 100%; /* Allow full width for the slideshow */
-    max-width: 800px; /* Set a max width for larger displays */
+    max-width: 1000px; /* Set a max width for larger displays */
     position: relative; /* For positioning slides */
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex; /* Add flexbox to center the image */
+    justify-content: center; /* Center the content inside */
 }
+
+
+.slideshow-container {
+    display: flex;
+    justify-content: center; /* Center the slides */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Use full height of the container */
+}
+
 
 /* Main Slides */
 .mySlides {
     display: none; /* Hide all slides by default */
-    text-align: center; /* Center content */
+    position: relative; /* Ensure positioning relative to the container */
+    margin: 0 auto; /* Center the slide */
+    border: 15px solid transparent; /* Create space for the border */
 }
+
+
+.mySlides:hover {
+    border-color: rgba(255, 255, 255, 0.5); /* Change border color on hover */
+}
+
 
 /* Ensure titles are styled appropriately */
 .portfolio-img-container p {
