@@ -52,6 +52,7 @@ function showSlides(n) {
     // Show the current slide
     slides[slideIndex - 1].style.display = "block";  
 
+
     // Update the title below the image
     const title = document.querySelector('.portfolio-img-container p');
     title.textContent = slides[slideIndex - 1].querySelector('img').alt; // Use alt attribute for the title
