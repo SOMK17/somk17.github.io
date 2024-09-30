@@ -51,3 +51,29 @@ function showSlides(n) {
 
     slides[slideIndex - 1].style.display = "block";  
 }
+
+let currentImageIndex = 0;
+const images = [
+    { src: 'images/image1.jpg', title: 'Image 1' },
+    { src: 'images/image2.jpg', title: 'Image 2' },
+    { src: 'images/image3.jpg', title: 'Image 3' },
+    // Add more images as needed
+];
+
+function updateImage() {
+    const img = document.querySelector('.portfolio-img');
+    const title = document.querySelector('.portfolio-img-container p');
+    img.src = images[currentImageIndex].src;
+    title.textContent = images[currentImageIndex].title;
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateImage();
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImage();
+}
+
