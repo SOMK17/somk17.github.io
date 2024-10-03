@@ -90,4 +90,3 @@ function prevImage() {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     updateImage();
 }
-
