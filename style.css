@@ -7,18 +7,24 @@ body {
 
 .curtain {
     position: fixed;
-    width: 50%;
+    width: 50%; /* Each curtain covers half the screen */
     height: 100%;
     background-color: #800020; /* Wine color */
     top: 0;
     transition: transform 2s ease;
     z-index: 2;
-    background-image: url('textures/curtain-texture.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-image: url('textures/curtain-texture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#curtain-left, #curtain-right {
+#curtain-left {
+    left: 0; /* Positions the left curtain */
+    transform: translateX(0);
+}
+
+#curtain-right {
+    right: 0; /* Positions the right curtain */
     transform: translateX(0);
 }
 
@@ -40,103 +46,61 @@ body {
     text-align: center;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
-
 .portfolio-img {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    object-fit: cover; 
-    display: block; 
-    margin: 0 auto; 
-    border: none; 
+    width: auto;
+    max-height: 1000px; /* Max height */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the box */
+    display: block;
+    margin: 0 auto;
+    border: none; /* Remove border */
 }
 
 .mySlides {
-    display: none; 
-    position: relative; 
-    margin: 0 auto; 
-    border: 15px solid transparent; 
-}
-
-.mySlides:hover {
-    border-color: rgba(255, 255, 255, 0.5); 
+    display: none; /* Hide all slides by default */
+    position: relative; /* Ensure positioning relative to the container */
+    margin: 0 auto; /* Center the slide */
 }
 
 #portfolio-content {
-    background-color: #000; 
-    color: #f0f0f0; 
+    background-color: #000000; /* Black background */
+    color: #f0f0f0; /* Off-white color for text */
     text-align: center;
     padding: 20px;
 }
 
-.portfolio-img-container {
-    position: relative;
-    display: inline-flex;
-    flex: 1 1 auto; 
-    margin: 20px;
-    border: 5px solid rgba(255, 255, 255, 0.2); 
-    padding: 10px; 
-}
-
-.portfolio-img-container p {
-    color: #f0f0f0; 
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #f0f0f0; 
-    background-color: #444; 
-    border: 2px solid #f0f0f0; 
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-button:hover {
-    background-color: #800020; 
-    color: #fff; 
+.slideshow-container {
+    width: 100%; /* Full width */
+    max-width: 1000px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center content inside */
+    height: auto; /* Adjust based on content */
 }
 
 .button-container {
-    display: flex; 
-    justify-content: center; 
-    margin: 20px 0; 
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the buttons */
+    margin: 20px 0; /* Add some space around the buttons */
 }
 
 .prev, .next {
     cursor: pointer;
-    padding: 10px 20px; 
-    font-size: 24px; 
-    background-color: #000; 
-    color: #fff; 
-    border: none; 
-    border-radius: 5px; 
-    margin: 0 10px; 
-    transition: background-color 0.3s; 
+    padding: 10px 20px; /* Increase padding for larger buttons */
+    font-size: 24px; /* Make the buttons larger */
+    background-color: #000; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Slightly round the corners */
+    margin: 0 10px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth background change */
 }
 
 .prev:hover, .next:hover {
-    background-color: #444; 
+    background-color: #444; /* Darken background on hover */
 }
 
-/* Slideshow Container */
-.slideshow-container {
-    width: 100%; 
-    max-width: 1000px; 
-    position: relative; 
-    margin: 0 auto; 
-    display: flex; 
-    justify-content: center; 
-    height: 100%; 
+.portfolio-img-container p {
+    color: #f0f0f0; /* Off-white text color */
+    text-align: center; /* Center titles */
 }
