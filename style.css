@@ -48,7 +48,7 @@ body {
 
 .portfolio-img {
     max-width: 100%;  /* Allow the image to scale down to fit its container */
-    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    max-height: 75vh; /* Limit the height to 80% of the viewport height */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the box without stretching */
     display: block;
