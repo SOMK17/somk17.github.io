@@ -68,6 +68,7 @@ body {
     object-fit: cover; /* This will make the image cover the entire box */
     display: block; /* Ensure the image is treated as a block element */
     margin: 0 auto; /* Center the image horizontally */
+    border: none; /* Remove border */
 }
 
 .mySlides {
