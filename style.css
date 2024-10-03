@@ -65,6 +65,7 @@ body {
     width: auto; /* Allow width to be automatic */
     max-height: 1000px; /* Set a maximum height for the images */
     height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* This will make the image cover the entire box */
     display: block; /* Ensure the image is treated as a block element */
     margin: 0 auto; /* Center the image horizontally */
 }
