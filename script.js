@@ -22,6 +22,7 @@ function openCurtain() {
     setTimeout(() => {
         document.getElementById('portfolio-content').style.display = 'block';
         document.body.style.overflow = 'auto'; // Allow scrolling after curtains open
+        showSlides(); // Start the slideshow after curtain opens
     }, 2000); // Delay to match curtain animation duration
 }
 
@@ -45,20 +46,22 @@ function showSlides() {
     slides[slideIndex].style.display = "block";  
 
     // Update the title below the image
-    const title = document.querySelector('.portfolio-img-container p');
-    title.textContent = slides[slideIndex].querySelector('img').alt; // Use alt attribute for the title
+    const title = slides[slideIndex].querySelector('p');
+    document.getElementById('slide-title').textContent = title.textContent; // Use title text
 }
 
 // Set the initial slide to display
 showSlides();
 
-// Add event listeners to the next and previous buttons
-document.getElementById("nextBtn").addEventListener("click", function() {
-    slideIndex++;
+// Function to navigate to the next slide
+function plusSlides(n) {
+    slideIndex += n; // Update slideIndex based on input
+    if (slideIndex >= slides.length) {
+        slideIndex = 0; // Reset to the first slide if at the end
+    } else if (slideIndex < 0) {
+        slideIndex = slides.length - 1; // Loop to the last slide if at the beginning
+    }
     showSlides();
-});
+}
 
-document.getElementById("prevBtn").addEventListener("click", function() {
-    slideIndex--;
-    showSlides();
-});
+// Ensure to bind the functions to the buttons in the HTML
