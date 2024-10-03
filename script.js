@@ -90,3 +90,23 @@ function prevImage() {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     updateImage();
 }
+
+let slideIndex = 0; // Starting index for slides
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    let titles = document.getElementsByClassName("slide-title"); // Get all titles
+
+    // Hide all slides and titles
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+        titles[i].style.display = "none"; // Hide all titles
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; } // Reset index if it exceeds
+
+    // Show the current slide and its title
+    slides[slideIndex - 1].style.display = "block"; 
+    titles[slideIndex - 1].style.display = "block"; // Show title for current slide
+}
