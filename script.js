@@ -52,22 +52,23 @@ function showSlides() {
 
 // Navigation functionality for the buttons
 document.querySelector(".next").addEventListener("click", function() {
-    slideIndex++;
+    slideIndex++; // Move to the next slide
     if (slideIndex >= document.getElementsByClassName("mySlides").length) {
         slideIndex = 0; // Reset to the first slide if at the end
     }
-    showSlides();
+    showSlides(); // Show the slide after updating the index
 });
 
 document.querySelector(".prev").addEventListener("click", function() {
-    slideIndex--;
+    slideIndex--; // Move to the previous slide
     if (slideIndex < 0) {
         slideIndex = document.getElementsByClassName("mySlides").length - 1; // Go to the last slide if at the beginning
     }
-    showSlides();
+    showSlides(); // Show the slide after updating the index
 });
 
 // Set the initial slide to display when the page loads
 window.onload = function() {
     document.getElementById('portfolio-content').style.display = 'none'; // Keep content hidden until password is entered
+    showSlides(); // Show the first slide immediately after loading
 };
