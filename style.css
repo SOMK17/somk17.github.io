@@ -55,7 +55,7 @@ body {
 
 .gallery img {
     width: 100%; /* This makes each image take the full width of its container */
-    max-width: 600px; /* Set a max width for larger images */
+    max-width: 1000px; /* Set a max width for larger images */
     margin: 10px auto;
     display: block;
     border: 2px solid #000;
