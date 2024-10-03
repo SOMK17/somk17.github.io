@@ -22,7 +22,7 @@ function openCurtain() {
     setTimeout(() => {
         document.getElementById('portfolio-content').style.display = 'block';
         document.body.style.overflow = 'auto'; // Allow scrolling after curtains open
-        showSlides(); // Start the slideshow after curtain opens
+        showSlides(); // Show the first slide when curtains open
     }, 2000); // Delay to match curtain animation duration
 }
 
@@ -46,22 +46,28 @@ function showSlides() {
     slides[slideIndex].style.display = "block";  
 
     // Update the title below the image
-    const title = slides[slideIndex].querySelector('p');
-    document.getElementById('slide-title').textContent = title.textContent; // Use title text
+    const title = document.getElementById('slide-title');
+    title.textContent = slides[slideIndex].querySelector('p').textContent; // Get the title from the current slide
 }
 
-// Set the initial slide to display
-showSlides();
-
-// Function to navigate to the next slide
-function plusSlides(n) {
-    slideIndex += n; // Update slideIndex based on input
-    if (slideIndex >= slides.length) {
+// Navigation functionality for the buttons
+document.querySelector(".next").addEventListener("click", function() {
+    slideIndex++;
+    if (slideIndex >= document.getElementsByClassName("mySlides").length) {
         slideIndex = 0; // Reset to the first slide if at the end
-    } else if (slideIndex < 0) {
-        slideIndex = slides.length - 1; // Loop to the last slide if at the beginning
     }
     showSlides();
-}
+});
 
-// Ensure to bind the functions to the buttons in the HTML
+document.querySelector(".prev").addEventListener("click", function() {
+    slideIndex--;
+    if (slideIndex < 0) {
+        slideIndex = document.getElementsByClassName("mySlides").length - 1; // Go to the last slide if at the beginning
+    }
+    showSlides();
+});
+
+// Set the initial slide to display when the page loads
+window.onload = function() {
+    document.getElementById('portfolio-content').style.display = 'none'; // Keep content hidden until password is entered
+};
