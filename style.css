@@ -47,14 +47,15 @@ body {
 }
 
 .portfolio-img {
-    width: auto;
-    max-height: 1000px; /* Max height */
+    max-width: 100%;  /* Allow the image to scale down to fit its container */
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the box */
+    object-fit: cover; /* Cover the box without stretching */
     display: block;
     margin: 0 auto;
     border: none; /* Remove border */
 }
+
 
 .mySlides {
     display: none; /* Hide all slides by default */
